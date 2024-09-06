@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    font-family: Monaco;
+  }
+  
+  main {
+    padding: 4em;
+    padding-top: 2em;
+  }
+  
+  section {
+    margin-bottom: 2em;
+    background-color: rgb(50, 50, 50);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  #habit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  #habit-list li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+  }
+  
+  #habit-list li:last-child {
+      border-bottom: none;
+  }
+  
+  #task-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  #task-list li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+  }
+  
+  #task-list li:last-child {
+      border-bottom: none;
+  }
+  
+  
+  #completed-task-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  #completed-task-list li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      text-decoration: line-through;
+  }
+  
+  #completed-task-list li:last-child {
+      border-bottom: none;
+  }
