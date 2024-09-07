@@ -1,31 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/todo.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/menu.css" />
     <title>Homepage</title>
-</head>
-<body>
-    <section>
-        <h2>Habit Tracker</h2>
-         <input id="habit-input" type="text" placeholder="Enter a habit">
-         <button id="add-habit-btn">Add Habit</button>
-         <ul id="habit-list"></ul>
-     </section>
-        
-     <section>
-       <h2>Tasks</h2>
-         <input id="task-input" type="text" placeholder="Enter a task">
-         <button id="add-task-btn">Add Task</button>
-         <ul id="task-list"></ul>
-         <ul id="completed-task-list"></ul>
-     </section>
-         
-     
-     <button id="clear-btn" style = "margin-top: 5em;">Clear Everything</button>
+  </head>
+  <body>
+    
 
-     <script src="js/todo.js"></script>
-</body>
+    <div class="container">
+      <button class="menu-btn">Menu</button>
+
+      <!-- The menu container -->
+
+      <div class="menu-container">
+        <ul>
+          <li><a href="/">home</a></li>
+
+          <li><a href="/desk">desk</a></li>
+
+          <li><a href="/notes">notes</a></li>
+
+          <li><a href="/calendar">calendar</a></li>
+        </ul>
+      </div>
+
+      <h1>My Workspace</h1>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="icon">💼</span>
+
+          <h2>Desk</h2>
+        </div>
+
+        <div class="card-content">
+          <ul>
+            <li>
+              Complete project proposal <span class="date">2023-06-15</span>
+            </li>
+
+            <li>
+              Review team performance <span class="date">2023-06-20</span>
+            </li>
+
+            <li>
+              Prepare for client meeting <span class="date">2023-06-18</span>
+            </li>
+          </ul>
+
+          <button class="view-all"><a href="/desk">View all tasks →</a></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="icon">📝</span>
+
+          <h2>Notes</h2>
+        </div>
+
+        <div class="card-content">
+          <ul>
+            <li>
+              Project brainstorming ideas <span class="date">2023-06-10</span>
+            </li>
+
+            <li>
+              Meeting minutes with design team
+              <span class="date">2023-06-12</span>
+            </li>
+
+            <li>
+              Personal development goals <span class="date">2023-06-14</span>
+            </li>
+          </ul>
+
+          <button class="view-all">
+            <a href="/notes">View all notes →</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="icon">🗓️</span>
+
+          <h2>Calendar</h2>
+        </div>
+
+        <div class="card-content">
+          <ul>
+            <li>Team standup <span class="date">2023-06-15 09:00</span></li>
+
+            <li>
+              Client presentation <span class="date">2023-06-16 14:00</span>
+            </li>
+
+            <li>Project deadline <span class="date">2023-06-20 18:00</span></li>
+          </ul>
+
+          <button class="view-all">View full calendar →</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+        // Add an event listener to the menu button
+        document
+          .querySelector(".menu-btn")
+          .addEventListener("click", function () {
+            // Toggle the menu container
+            document.querySelector(".menu-container").classList.toggle("show");
+          });
+      </script>
+  </body>
 </html>

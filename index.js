@@ -19,15 +19,15 @@ app.get('/', (request, response) => {
 });
 
 // Include route files
-const usersRoute = require('./routes/users');
-const workRoute = require('./routes/work');
+const notesRoute = require('./routes/notes');
+const deskRoute = require('./routes/desk');
 
 
 
 
 // Use routes
-app.use('/users', usersRoute);
-app.use('/work', workRoute);
+app.use('/desk', deskRoute);
+app.use('/notes', notesRoute);
 
 // app.listen(process.env.PORT || 3000, () => console.log('App is running on http://localhost:3000'))
 app.listen(3000, () => {

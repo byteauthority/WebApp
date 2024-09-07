@@ -1,0 +1,64 @@
+/* Style the menu button */
+
+.menu-btn {
+    position: fixed;
+    /* Add this to fix the button to the top-right corner */
+    top: 0;
+    right: 0;
+    /* z-index: 1; */
+    /* Add this to set the z-index to 1 */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style the menu container */
+.menu-container {
+    position: fixed;
+    /* Add this to fix the container to the top-right corner */
+    top: 40px;
+    /* Adjust the top position to account for the button's height */
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    display: none;
+}
+
+/* Style the menu items */
+.menu-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container li {
+    margin-bottom: 10px;
+}
+
+.menu-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+/* Add a new class to show the menu container */
+
+.show {
+
+    display: block;
+}
+
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
