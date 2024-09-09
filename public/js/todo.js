@@ -4,9 +4,9 @@ let user = {
     completedTaskList: []
 };
 
-const habitInput = document.getElementById('habit-input');
-const addHabitBtn = document.getElementById('add-habit-btn');
-const habitListElement = document.getElementById('habit-list');
+// const habitInput = document.getElementById('habit-input');
+// const addHabitBtn = document.getElementById('add-habit-btn');
+// const habitListElement = document.getElementById('habit-list');
 
 const taskInput = document.getElementById('task-input');
 const addTaskBtn = document.getElementById('add-task-btn');
@@ -19,23 +19,23 @@ clearBtn.addEventListener('click', clearEverything);
 // Load user data from local storage
 if (localStorage.getItem('user')) {
     user = JSON.parse(localStorage.getItem('user'));
-    renderHabitList();
+    // renderHabitList();
     renderTaskList();
     renderCompletedTaskList();
 }
 
-addHabitBtn.addEventListener('click', addHabit);
+// addHabitBtn.addEventListener('click', addHabit);
 addTaskBtn.addEventListener('click', addTask);
 
-function addHabit() {
-    const habit = habitInput.value.trim();
-    if (habit !== '') {
-        user.habitList.push(habit);
-        habitInput.value = '';
-        renderHabitList();
-        saveUserData();
-    }
-}
+// function addHabit() {
+//     const habit = habitInput.value.trim();
+//     if (habit !== '') {
+//         user.habitList.push(habit);
+//         habitInput.value = '';
+//         renderHabitList();
+//         saveUserData();
+//     }
+// }
 
 function addTask() {
     const task = taskInput.value.trim();
@@ -47,14 +47,14 @@ function addTask() {
     }
 }
 
-function renderHabitList() {
-    habitListElement.innerHTML = '';
-    user.habitList.forEach((habit) => {
-        const li = document.createElement('li');
-        li.textContent = habit;
-        habitListElement.appendChild(li);
-    });
-}
+// function renderHabitList() {
+//     habitListElement.innerHTML = '';
+//     user.habitList.forEach((habit) => {
+//         const li = document.createElement('li');
+//         li.textContent = habit;
+//         habitListElement.appendChild(li);
+//     });
+// }
 
 function renderTaskList() {
     taskListElement.innerHTML = '';
@@ -92,7 +92,7 @@ function clearEverything() {
     user.habitList = [];
     user.taskList = [];
     user.completedTaskList = [];
-    renderHabitList();
+    // renderHabitList();
     renderTaskList();
     renderCompletedTaskList();
     saveUserData();
